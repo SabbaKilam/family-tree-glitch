@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Family Cameos</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!--==============| REACT FILES REMOTE |===================-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.development.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.development.js"></script>
+		<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> 
+		<!--===============================================--> 
+		<!--========| REACT FILES LOCAL |===========
+			<script src="./React.js"></script>
+			<script src="./ReactDOM.js"></script>
+			<script src="./Babel.js"></script> 
+			========================================-->
+		<link rel="stylesheet" href="./style.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	</head>
+	
+	<body>
+		<div id="root"></div>
+		<script type="text/babel" src="./components/Cameo.js"></script>
+		<script type="text/babel" src="./components/FamilyContainer.js"></script>
+		<script type="text/babel" >
+			
+			/*========| plug the app into the html document |=========*/	
+			ReactDOM.render( <FamilyContainer />, document.querySelector(`#root`) );
+		</script>
+	</body>
+</html>

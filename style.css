@@ -1,0 +1,41 @@
+html {
+	position: fixed;
+	display: grid;
+	place-content: center;
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(-20deg, white, teal, white);
+	overflow: hidden;
+	user-select: none;
+	overflow: hidden;
+	font-size: calc(0.5vh + 0.5vw + 10px);
+}
+
+body {
+	font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+	margin: 2rem;
+	padding: 1rem;
+	height: 100vh;
+	width: 100vw;
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+}
+
+.cameo {
+	border-radius: 50%;
+	/* round cameos*/
+	height: 11rem;
+	width: 11rem;
+	margin: 2rem;
+
+	box-shadow: 0.25rem 0.25rem 1rem black;
+	/*background: url("./images/frank.jpg") no-repeat center;*/
+	background-size: contain;
+	background-color: lightblue;
+	font-size: 1.5rem;
+	text-align: center;
+	color: gray;
+}
