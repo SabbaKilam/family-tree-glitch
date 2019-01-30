@@ -37,10 +37,11 @@ class FamilyContainer extends React.Component {
 				{
 					description: "",
 					email: "",
-					name: "Halley Berry",
-					portraitURL: "https://articlebio.com/uploads/bio/2017/10/15/skylar-diggins.gif",
+					name: "Liam Neeson",
+					portraitURL: "images/LiamNeesonjpg.jpg",
 					phone: "",
-				},				
+				},
+        
 			],
 		}
 	}
@@ -62,7 +63,7 @@ class FamilyContainer extends React.Component {
 	render() {
 		return (
 			<div>
-				{this.renderCameos()}
+				{ this.renderCameos() }
 			</div>
 		)
 	}

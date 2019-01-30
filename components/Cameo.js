@@ -37,7 +37,7 @@ class Cameo extends React.Component{
 		return(
 			  
 			<div className="cameo" style={style}>
-				<p style={nameStyle}>{name}</p>
+				<p style={nameStyle}></p>
 			</div>
 		)
 	}
