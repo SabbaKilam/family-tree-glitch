@@ -54,6 +54,13 @@ class FamilyContainer extends React.Component {
   assignRandomLocation(){
     
   }
+  
+  enlargeCameo(eventObject){
+    
+  }
+  reduceCameo(eventObject){
+  
+  }
 	
 	renderCameos() {
 		
