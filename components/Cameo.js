@@ -16,8 +16,8 @@ class Cameo extends React.Component{
                           : "vh"
         
     //alert(eventObject.target.id)
-    source.style.height = "20vh"
-    source.style.width = "20vh"  
+    source.style.height = `20${viewportUnit}`
+    source.style.width = `20${viewportUnit}` 
     
   }
   restoreCameoSize(eventObject){
