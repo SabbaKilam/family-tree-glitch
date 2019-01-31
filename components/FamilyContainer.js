@@ -1,4 +1,6 @@
 /*global React*/
+/*global L*/
+L.noPinchZoom();
 class FamilyContainer extends React.Component {
 	
 	constructor( props ) {
@@ -126,7 +128,6 @@ class FamilyContainer extends React.Component {
 		
 		return cameos;
 	}
-	
 	render() {
 		return (
 			<div id="familyContainer">
