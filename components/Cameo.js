@@ -1,8 +1,11 @@
 /*global React*/
 class Cameo extends React.Component{
-	
-	constructor( props ) {		
+  constructor( props ) {		
 		super( props );
+    this.state = {
+      normalSize: "7rem",
+      isSelected: false
+    }
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
     this.restoreCameoSize = this.restoreCameoSize.bind(this);
@@ -19,12 +22,21 @@ class Cameo extends React.Component{
     source.style.height = `20${viewportUnit}`
     source.style.width = `20${viewportUnit}` 
     
+    setSelected(source)
+    //================| helper function(s) |==================//
+    function setSelected(){
+      //de-select all cameos
+      document.querySelectorAll(`.cameo`).forEach(cameo => {
+        
+      })
+    }
+    
   }
   restoreCameoSize(eventObject){
     const source = eventObject.target;
     //alert(eventObject.target.id)
-    source.style.height = "8rem"
-    source.style.width = "8rem"  
+    source.style.height = this.state.normalSize
+    source.style.width = this.state.normalSize
   }  
 	render() {
 		
