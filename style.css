@@ -1,6 +1,6 @@
 html {
 	position: fixed;
-  tap-highlight-color: rgba(0,0,0,0);	  
+	tap-highlight-color: rgba(0,0,0,0);	  
 	display: grid;
 	place-content: center;
 	margin: 0;
@@ -19,24 +19,108 @@ body {
 	padding: 1rem;
 	height: 100vh;
 	width: 100vw;
+	/*
 	display: grid;
 	place-content: center;
+	*/
 	overflow: hidden;
 }
 
 .cameo {
 	border-radius: 50%;
 	/* round cameos*/
-  height: 7rem;
+	height: 7rem;
 	width: 7rem;
 	margin: 0.5rem;
 	box-shadow: 0.25rem 0.25rem 1rem black;
-  transition: all 0.5s ease;
+	transition: all 0.5s ease;
 	background-color: lightblue;
 	font-size: 1.5rem;
 	text-align: center;
 	color: gray;
-  cursor: pointer;
-  display: inline-block;
+	cursor: pointer;
+	display: inline-block;
 }
 
+#nickName{
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100vw;
+	max-width: 85vw;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0.125rem 0.125rem 5rem gray;
+	display: grid;
+	place-content: center;
+	font-size: 2rem;
+	color: #111;
+	text-shadow: 0 1px 0 #eee;
+	transition: all 0.25s ease;
+	min-height: 2rem;
+	background: url(images/KinkeepersRoundTransparent.png) no-repeat left;
+	background-size: 4.5rem 4.5rem;
+
+	
+}
+
+#infoSeperator{
+	width: 100%;
+}
+#infoHolder{
+	position: fixed;
+	bottom: 0;
+	height: 50vh;
+	left: 50%;
+	transform: translate(-50%);	
+	width: 100vw;
+	max-width: 85vw;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0.125rem 0.125rem 5rem gray;
+	z-index: -1;
+	display: grid;
+	place-content: center;
+	font-size: 2rem;
+
+}
+
+#infoHolderCameo{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 37.5vw;
+	width: 37.5Vw;
+	border-radius: 50%;
+	background: url(images/kinkeepers.png) no-repeat left;
+	background-size: contain;
+	transition: all 1s ease;	
+	//box-shadow: 0.25rem 0.25rem 1rem black;	
+}
+
+#infoHolderInfo{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 37.5vw;
+	width: 50Vw;
+	
+	display: grid;
+	place-content: center;
+	
+	border-radius: 0.125rem;
+	transition: all 0..5s ease;	
+	box-shadow: 0 0 10rem lightgray;
+	font-size: 1.75rem;
+	font-weight: bold;
+}
+#familyContainer{
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}

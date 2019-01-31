@@ -9,44 +9,98 @@ class FamilyContainer extends React.Component {
 			familyInfo: [
 				{
 					description: "",
-					email: "",
-					name: "Frank Smith",
+					email: "Frank@FS.me",
+					name: "Frank Sinatra",
+					nickName: ' " Chairman of the Board " ',
 					portraitURL: "./images/frank.jpg",
-          screenLocation: 5,          
+        			screenLocation: 5,          
 					phone: "",
 				},
 				{
 					description: "",
-					email: "",
+					email: "Jackie@JC.me",
 					name: "Jackie Chan",
+					nickName: '" Bruce Lee Jr. "',					
 					portraitURL: "./images/JackieChan.jpg",
-          screenLocation: 5,          
+        			screenLocation: 5,          
 					phone: "",
 				},
 				{
 					description: "",
-					email: "",
+					email: "Charlize@CT.me",
 					name: "Charlize Theron",
+					nickName: null,					
 					portraitURL:  "./images/CharlizeTheron.jpg",
-          screenLocation: 5,          
+        			screenLocation: 5,          
 					phone: "",
 				},
 				{
 					description: "",
-					email: "",
+					email: "Halley@HB.me",
 					name: "Halley Berry",
+					nickName: null,					
 					portraitURL: "./images/HalleyBerry.jpg",
-          screenLocation: 5,          
+        			screenLocation: 5,          
 					phone: "",
 				},				
 				{
 					description: "",
-					email: "",
+					email: "Liam@LN.me",
 					name: "Liam Neeson",
-					portraitURL: "images/LiamNeesonjpg.jpg",
-          screenLocation: 5,          
+					nickName: ' " The Kraken Master " ',					
+					portraitURL: "./images/LiamNeesonjpg.jpg",
+        			screenLocation: 5,          
 					phone: "",
 				},
+				//////////////////////////////////////////////////////////
+				{
+					description: "",
+					email: "Frank@FS.me",
+					name: "Frank Sinatra",
+					nickName: ' " Chairman of the Board " ',
+					portraitURL: "./images/frank.jpg",
+        			screenLocation: 5,          
+					phone: "",
+				},
+				{
+					description: "",
+					email: "Jackie@JC.me",
+					name: "Jackie Chan",
+					nickName: '" Bruce Lee Jr. "',					
+					portraitURL: "./images/JackieChan.jpg",
+        			screenLocation: 5,          
+					phone: "",
+				},
+				{
+					description: "",
+					email: "Charlize@CT.me",
+					name: "Charlize Theron",
+					nickName: null,					
+					portraitURL:  "./images/CharlizeTheron.jpg",
+        			screenLocation: 5,          
+					phone: "",
+				},
+				{
+					description: "",
+					email: "Halley@HB.me",
+					name: "Halley Berry",
+					nickName: null,					
+					portraitURL: "./images/HalleyBerry.jpg",
+        			screenLocation: 5,          
+					phone: "",
+				},				
+				{
+					description: "",
+					email: "Liam@LN.me",
+					name: "Liam Neeson",
+					nickName: ' " The Kraken Master " ',					
+					portraitURL: "./images/LiamNeesonjpg.jpg",
+        			screenLocation: 5,          
+					phone: "",
+				},				
+				//////////////////////////////////////////////////////////
+						
+				
         
 			],
 		}
@@ -56,19 +110,18 @@ class FamilyContainer extends React.Component {
   assignRandomLocation(){
     
   }
-  
-  
 
 	
 	renderCameos() {
-		
+		//		let name = this.props.info.nickName ? this.props.info.nickName : this.props.info.name ;
 		const cameos = [];
-		let contact = null;
-		
-		for( let i=0; i<5; i++ ) {
-			
-			contact = this.state.familyInfo[i];
-			cameos.push(<Cameo contact={contact} key={i} id={"i"+i} />);
+		let info = null;
+		let name = null;
+		let maxCount = this.state.familyInfo.length
+		for( let i = 0; i < maxCount; i++ ) {
+			info = this.state.familyInfo[i];
+			name = info.nickName ? info.nickName : info.name;
+			cameos.push( <Cameo info={info} key={i} id={"i" + i} name={name}/> );
 		}
 		
 		return cameos;
