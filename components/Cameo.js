@@ -15,6 +15,7 @@ class Cameo extends React.Component{
 	}
 	
   enlargeCameo(eventObject){
+    clearInterval(this.state.timerId)
     const source = eventObject.target;
       const viewportUnit = window.innerWidth >= window.innerHeight ?
                             "vw"
@@ -29,8 +30,13 @@ class Cameo extends React.Component{
     this.setState({
       timerId: (
       		setInterval(()=>{
-            if(this.getState()
-    
+            if(this.state.isSelected){
+                const viewportUnit = window.innerWidth >= window.innerHeight ?
+                            "vw"
+                          : "vh"  
+                source.style.height = `20${viewportUnit}`
+                source.style.width = `20${viewportUnit}`             
+            }    
           }, 100) 
       )
     })
