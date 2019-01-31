@@ -1,10 +1,20 @@
+/*global React*/
 class Cameo extends React.Component{
 	
-	constructor( props ) {
-		
+	constructor( props ) {		
 		super( props );
+    
+    this.enlargeCameo = this.enlargeCameo.bind(this);
+    this.reduceCameo = this.reduceCameo.bind(this);
+    
 	}
 	
+  enlargeCameo(eventObject){
+    alert(eventObject.target.id)
+  }
+  reduceCameo(eventObject){
+  
+  }  
 	render() {
 		
 		let name = this.props.contact.name;
@@ -36,7 +46,7 @@ class Cameo extends React.Component{
 		
 		return(
 			  
-			<div className="cameo" style={style}>
+			<div className="cameo" style={style} onMouseEnter={this.enlargeCameo} id={this.props.id}>
 				<p style={nameStyle}></p>
 			</div>
 		)
