@@ -9,6 +9,8 @@ class Cameo extends React.Component{
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
     this.restoreCameoSize = this.restoreCameoSize.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    
     
 	}
 	
@@ -16,28 +18,26 @@ class Cameo extends React.Component{
     const source = eventObject.target;
       const viewportUnit = window.innerWidth >= window.innerHeight ?
                             "vw"
-                          : "vh"
-        
+                          : "vh"        
     //alert(eventObject.target.id)
     source.style.height = `20${viewportUnit}`
     source.style.width = `20${viewportUnit}` 
-    
-    setSelected(source)
-    //================| helper function(s) |==================//
-    function setSelected(){
-      //de-select all cameos
-      document.querySelectorAll(`.cameo`).forEach(cameo => {
-        
-      })
-    }
-    
+    this.setState({
+      isSelected: true
+    })
   }
   restoreCameoSize(eventObject){
     const source = eventObject.target;
     //alert(eventObject.target.id)
     source.style.height = this.state.normalSize
     source.style.width = this.state.normalSize
-  }  
+    this.setState({
+      isSelected: false
+    })    
+  }
+  handleResize(eventObject){
+    alert(`resized`);
+  }
 	render() {
 		
 		let name = this.props.contact.name;
@@ -73,6 +73,7 @@ class Cameo extends React.Component{
         style={style} 
         onMouseEnter={this.enlargeCameo}
         onMouseLeave={this.restoreCameoSize}
+        onChange={this.handleResize}
         
         id={this.props.id}>
 				<p style={nameStyle}></p>
