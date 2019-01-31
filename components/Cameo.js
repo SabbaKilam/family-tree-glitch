@@ -23,8 +23,21 @@ class Cameo extends React.Component{
     source.style.height = `20${viewportUnit}`
     source.style.width = `20${viewportUnit}` 
     this.setState({
-      isSelected: true
+      isSelected: true,
+      timerId: 0
     })
+    this.setState({
+      timerId: (
+      		setInterval(()=>{
+            if(this.getState()
+    
+          }, 100) 
+      )
+    })
+		setInterval(()=>{
+      
+    
+    }, 100)    
   }
   restoreCameoSize(eventObject){
     const source = eventObject.target;
@@ -61,12 +74,7 @@ class Cameo extends React.Component{
 		/**
 		 * If the bubble is selected then make the size larger and center it.
 		 */
-		
-		if( true ) {
-			
-			//Size it boiiiiii.
-		}
-		
+
 		return(
 			  
 			<div className="cameo" 
@@ -77,6 +85,7 @@ class Cameo extends React.Component{
         
         id={this.props.id}>
 				<p style={nameStyle}></p>
+        
 			</div>
 		)
 	}
