@@ -49,6 +49,7 @@ class FamilyContainer extends React.Component {
         
 			],
 		}
+    this.enlargeCameo = this.enlargeCameo.bind(this);
 	}
   
   assignRandomLocation(){
@@ -56,7 +57,7 @@ class FamilyContainer extends React.Component {
   }
   
   enlargeCameo(eventObject){
-    
+    alert(eventObject.traget.id)
   }
   reduceCameo(eventObject){
   
@@ -70,7 +71,7 @@ class FamilyContainer extends React.Component {
 		for( let i=0; i<5; i++ ) {
 			
 			contact = this.state.familyInfo[i];
-			cameos.push(<Cameo contact={contact} key={i} />);
+			cameos.push(<Cameo contact={contact} key={i} on={this.enlargeCameo} id={i}/>);
 		}
 		
 		return cameos;
