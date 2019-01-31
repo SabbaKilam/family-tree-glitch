@@ -4,14 +4,16 @@ class Cameo extends React.Component{
 		super( props );
 		this.state = {
       timerId: 0,
-      resizeTime:
+      resizeTime: 3,
+      resizeTimerId: 0,
 		  normalSize: "7rem",
 		  isSelected: false,
 		  percentViewport: 18,
 		  nameHolder: document.querySelector('#nickName'),
 		  infoHolder: document.querySelector('#infoHolder'),
 		  infoHolderCameo: document.querySelector("#infoHolderCameo"),
-		  infoHolderInfo: document.querySelector("#infoHolderInfo")
+		  infoHolderInfo: document.querySelector("#infoHolderInfo"),
+      eventObject: {type: "none", target: {}}
 		  
 		  //id="infoHolderCameo"
 		};
@@ -77,7 +79,15 @@ class Cameo extends React.Component{
       isSelected: false
     });    
   }
-  
+  ///////////////////////////////////////////////////////////////////////
+  clearAndRestore(eventObject){
+    this.state
+    clearTimeout(this.state.resizeTimerId);
+    this.setState({
+      resizeTimerId: setTimeout( ()=>{}, 1000 * this.state.resizeTime )
+    });
+    
+  }
 //==========================| RENDER |=========================//
 	render() {
 		
