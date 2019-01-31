@@ -8,7 +8,7 @@ class Cameo extends React.Component{
       percentViewport: 30
     }
     
-    this.enlargeCameo = this.enlargeCameo.bind(this);
+    this['enlargeCameo'] = this.enlargeCameo.bind(this);
     this.restoreCameoSize = this.restoreCameoSize.bind(this);    
     
 	}
