@@ -4,7 +4,7 @@ class Cameo extends React.Component{
 		super( props );
 		this.state = {
       timerId: 0,
-      resizeTime: 3,
+      resizeTime: 1.5,
       resizeTimerId: 0,
 		  normalSize: "7rem",
 		  isSelected: false,
@@ -23,6 +23,9 @@ class Cameo extends React.Component{
 	}
 	////////////////////////////////////////////////////////////////////
   enlargeCameo(eventObject){
+  eventObject.persist();  
+  this.clearAndRestore(eventObject)  
+    
 	let image = this.props.info.portraitURL.slice(2);
 	let cameo = this.state.infoHolderCameo;
 	let infoHolderInfo = this.state.infoHolderInfo;
@@ -68,7 +71,9 @@ class Cameo extends React.Component{
   
   }
   ///////////////////////////////////////////////////////////////////////
-  restoreCameoSize(eventObject){
+  restoreCameoSize(eventObject){  eventObject.persist();    
+    
+  this.clearAndRestore(eventObject)    
     
 	this.state.nameHolder.innerText = "Family Tree";
     const source = eventObject.target;
@@ -81,10 +86,19 @@ class Cameo extends React.Component{
   }
   ///////////////////////////////////////////////////////////////////////
   clearAndRestore(eventObject){
-    this.state
-    clearTimeout(this.state.resizeTimerId);
+    //capture current event to state
     this.setState({
-      resizeTimerId: setTimeout( ()=>{}, 1000 * this.state.resizeTime )
+      eventObject: eventObject
+    });
+    
+    //kill prior timer
+    clearTimeout(this.state.resizeTimerId);
+    
+    //timer to restore size of target
+    this.setState({      
+      resizeTimerId: setTimeout( ()=>{
+        this.restoreCameoSize(this.state.eventObject)
+      }, 1000 * this.state.resizeTime )
     });
     
   }
