@@ -9,7 +9,8 @@ html {
 	background-image: linear-gradient(-15deg, teal, lightblue, #eee,lightblue, teal);
 	overflow: hidden;
 	user-select: none;
-	font-size: calc(0.5vh + 0.5vw + 4px);
+
+  font-size: calc(0.5vh + 0.5vw + 4px);
 }
 
 body {
