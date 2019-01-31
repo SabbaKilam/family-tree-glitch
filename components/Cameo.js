@@ -15,15 +15,20 @@ class Cameo extends React.Component{
 	}
 	
   enlargeCameo(eventObject){
-    /*
-    const type = eventObject.type
-    if ( type === "click" ) {
-      alert(`clicked)
-    }
-*/
-    const type = eventObject.type
-    if (false){}
     
+    const type = eventObject.type
+    if (type === 'click'){
+      //alert(`clicked`)
+      this.setState({
+        wasClicked: !this.state.wasClicked
+      })
+    }
+    
+    if (this.state.wasClicked){
+    
+      this.restoreSize(eventObject)
+      return
+    }
     clearInterval(this.state.timerId)
     const source = eventObject.target;
       const viewportUnit = window.innerWidth >= window.innerHeight ?
@@ -58,7 +63,10 @@ class Cameo extends React.Component{
   
   }
   restoreCameoSize(eventObject){
+    
+    if (this.state.wasClicked){return}
     const source = eventObject.target;
+    
     //alert(eventObject.target.id)
     source.style.height = this.state.normalSize
     source.style.width = this.state.normalSize
