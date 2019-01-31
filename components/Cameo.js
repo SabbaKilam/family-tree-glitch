@@ -4,7 +4,8 @@ class Cameo extends React.Component{
 		super( props );
     this.state = {
       normalSize: "7rem",
-      isSelected: false
+      isSelected: false,
+      wasClicked: false
     }
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
@@ -14,6 +15,15 @@ class Cameo extends React.Component{
 	}
 	
   enlargeCameo(eventObject){
+    /*
+    const type = eventObject.type
+    if ( type === "click" ) {
+      alert(`clicked)
+    }
+*/
+    const type = eventObject.type
+    if (false){}
+    
     clearInterval(this.state.timerId)
     const source = eventObject.target;
       const viewportUnit = window.innerWidth >= window.innerHeight ?
@@ -41,7 +51,6 @@ class Cameo extends React.Component{
               this.setState({
                 isSelected: false
               })
-              
             }
           }, 50) 
       )
@@ -74,8 +83,7 @@ class Cameo extends React.Component{
 			color: "white",
 			bottom: "-11rem",
 			position: "relative",
-			width:'100%',
-			
+			width:'100%',			
 		}
 		
 		/**
@@ -87,10 +95,8 @@ class Cameo extends React.Component{
 			<div className="cameo" 
         style={style} 
         onMouseEnter={this.enlargeCameo}
-        
-        onMouseLeave={this.restoreCameoSize}
-        onChange={this.handleResize}
-        
+        onClick={this.enlargeCameo}        
+        onMouseLeave={this.restoreCameoSize}        
         id={this.props.id}>
 				<p style={nameStyle}></p>
         
