@@ -9,11 +9,10 @@ class Cameo extends React.Component{
     }
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
-    this.restoreCameoSize = this.restoreCameoSize.bind(this);
-    
+    this.restoreCameoSize = this.restoreCameoSize.bind(this);    
     
 	}
-	
+	////////////////////////////////////////////////////////////////////
   enlargeCameo(eventObject){
 
 
@@ -50,6 +49,7 @@ class Cameo extends React.Component{
     })
   
   }
+  ///////////////////////////////////////////////////////////////////////
   restoreCameoSize(eventObject){
     
     if (this.state.wasClicked){return}
@@ -62,7 +62,8 @@ class Cameo extends React.Component{
       isSelected: false
     })    
   }
-
+  
+//==========================| RENDER |=========================//
 	render() {
 		
 		let name = this.props.contact.name;

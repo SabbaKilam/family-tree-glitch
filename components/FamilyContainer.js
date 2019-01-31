@@ -1,3 +1,4 @@
+/*global React*/
 class FamilyContainer extends React.Component {
 	
 	constructor( props ) {
