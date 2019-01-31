@@ -9,7 +9,6 @@ class Cameo extends React.Component{
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
     this.restoreCameoSize = this.restoreCameoSize.bind(this);
-    this.handleResize = this.handleResize.bind(this);
     
     
 	}
@@ -25,8 +24,7 @@ class Cameo extends React.Component{
     source.style.width = `20${viewportUnit}` 
     this.setState({
       isSelected: true,
-      timerId: 0
-    })
+     })
     this.setState({
       timerId: (
       		setInterval(()=>{
@@ -37,22 +35,18 @@ class Cameo extends React.Component{
                 source.style.height = `20${viewportUnit}`
                 source.style.width = `20${viewportUnit}`             
             }
-            else {
+            else if ( !this.state.isSelected ){
               source.style.height = this.state.normalSize
-              source.style.width = this.state.normalSize
-              /*
+              source.style.width = this.state.normalSize              
               this.setState({
                 isSelected: false
               })
-              */
+              
             }
-          }, 100) 
+          }, 50) 
       )
     })
-		setInterval(()=>{
-      
-    
-    }, 100)    
+  
   }
   restoreCameoSize(eventObject){
     const source = eventObject.target;
@@ -63,9 +57,7 @@ class Cameo extends React.Component{
       isSelected: false
     })    
   }
-  handleResize(eventObject){
-    alert(`resized`);
-  }
+
 	render() {
 		
 		let name = this.props.contact.name;
@@ -95,6 +87,7 @@ class Cameo extends React.Component{
 			<div className="cameo" 
         style={style} 
         onMouseEnter={this.enlargeCameo}
+        
         onMouseLeave={this.restoreCameoSize}
         onChange={this.handleResize}
         
