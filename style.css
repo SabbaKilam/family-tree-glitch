@@ -96,8 +96,7 @@ body {
 	border-radius: 50%;
 	background: url(images/kinkeepers.png) no-repeat left;
 	background-size: contain;
-	transition: all 1s ease;	
-	//box-shadow: 0.25rem 0.25rem 1rem black;	
+	transition: all 2s ease;	
 }
 
 #infoHolderInfo{

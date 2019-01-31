@@ -4,7 +4,7 @@ class Cameo extends React.Component{
 		super( props );
 		this.state = {
       timerId: 0,
-      resizeTime: 1.5,
+      resizeTime: 0.75,
       resizeTimerId: 0,
 		  normalSize: "7rem",
 		  isSelected: false,
@@ -75,7 +75,7 @@ class Cameo extends React.Component{
     
   this.clearAndRestore(eventObject)    
     
-	this.state.nameHolder.innerText = "Family Tree";
+	//this.state.nameHolder.innerText = "Family Tree";
     const source = eventObject.target;
 
     source.style.height = this.state.normalSize;
