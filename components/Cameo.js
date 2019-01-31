@@ -5,15 +5,26 @@ class Cameo extends React.Component{
 		super( props );
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
-    this.reduceCameo = this.reduceCameo.bind(this);
+    this.restoreCameoSize = this.restoreCameoSize.bind(this);
     
 	}
 	
   enlargeCameo(eventObject){
-    alert(eventObject.target.id)
+    const source = eventObject.target;
+      const viewportUnit = window.innerWidth >= window.innerHeight ?
+                            "vw"
+                          : "vh"
+        
+    //alert(eventObject.target.id)
+    source.style.height = "20vh"
+    source.style.width = "20vh"  
+    
   }
-  reduceCameo(eventObject){
-  
+  restoreCameoSize(eventObject){
+    const source = eventObject.target;
+    //alert(eventObject.target.id)
+    source.style.height = "8rem"
+    source.style.width = "8rem"  
   }  
 	render() {
 		
@@ -46,7 +57,12 @@ class Cameo extends React.Component{
 		
 		return(
 			  
-			<div className="cameo" style={style} onMouseEnter={this.enlargeCameo} id={this.props.id}>
+			<div className="cameo" 
+        style={style} 
+        onMouseEnter={this.enlargeCameo}
+        onMouseLeave={this.restoreCameoSize}
+        
+        id={this.props.id}>
 				<p style={nameStyle}></p>
 			</div>
 		)
