@@ -3,6 +3,8 @@ class Cameo extends React.Component{
 	constructor( props ) {		
 		super( props );
 		this.state = {
+      timerId: 0,
+      resizeTime:
 		  normalSize: "7rem",
 		  isSelected: false,
 		  percentViewport: 18,
@@ -19,19 +21,14 @@ class Cameo extends React.Component{
 	}
 	////////////////////////////////////////////////////////////////////
   enlargeCameo(eventObject){
-	//let image = "../" + this.props.info.portraitURL.slice(2);
 	let image = this.props.info.portraitURL.slice(2);
 	let cameo = this.state.infoHolderCameo;
 	let infoHolderInfo = this.state.infoHolderInfo;
 
 	this.state.nameHolder.innerText = this.props.name;
-	//infoHolder.innerText = this.props.info.name;
 	cameo.style.background = `url(${image}) no-repeat center`;
 	cameo.style.backgroundSize = "cover";	
 	infoHolderInfo.innerText = `${this.props.info.name}\n${this.props.info.nickName ? this.props.info.nickName : ""}\n${this.props.info.email}`;	
-	
-	// no-repeat center
-	//alert(this.props.info.name);
 	
     clearInterval(this.state.timerId);
     const source = eventObject.target;
@@ -73,8 +70,7 @@ class Cameo extends React.Component{
     
 	this.state.nameHolder.innerText = "Family Tree";
     const source = eventObject.target;
-    
-    //alert(eventObject.target.id)
+
     source.style.height = this.state.normalSize;
     source.style.width = this.state.normalSize;
     this.setState({
@@ -102,11 +98,6 @@ class Cameo extends React.Component{
 			width:'100%',			
 		};
 		
-		/**
-		 * If the bubble is selected then make the size larger and center it.
-		 *				onMouseEnter={this.enlargeCameo}  
-		 */
-
 		return(
 			<div 
 				className="cameo" 	
