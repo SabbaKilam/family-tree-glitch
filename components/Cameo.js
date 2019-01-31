@@ -5,7 +5,7 @@ class Cameo extends React.Component{
     this.state = {
       normalSize: "7rem",
       isSelected: false,
-      percentViewport: 25
+      percentViewport: 30
     }
     
     this.enlargeCameo = this.enlargeCameo.bind(this);
@@ -23,8 +23,8 @@ class Cameo extends React.Component{
                             "vw"
                           : "vh"        
     //alert(eventObject.target.id)
-    source.style.height = `20${viewportUnit}`
-    source.style.width = `20${viewportUnit}` 
+    source.style.height = `${this.state.percentViewport}${viewportUnit}`
+    source.style.width = `${this.state.percentViewport}${viewportUnit}`
     this.setState({
       isSelected: true,
      })
@@ -35,8 +35,8 @@ class Cameo extends React.Component{
                 const viewportUnit = window.innerWidth >= window.innerHeight ?
                             "vw"
                           : "vh"  
-                source.style.height = `20${viewportUnit}`
-                source.style.width = `20${viewportUnit}`             
+                source.style.height = `${this.state.percentViewport}${viewportUnit}`
+                source.style.width = `${this.state.percentViewport}${viewportUnit}`            
             }
             else if ( !this.state.isSelected ){
               source.style.height = this.state.normalSize
