@@ -11,6 +11,7 @@ class FamilyContainer extends React.Component {
 					email: "",
 					name: "Frank Smith",
 					portraitURL: "./images/frank.jpg",
+          screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -18,6 +19,7 @@ class FamilyContainer extends React.Component {
 					email: "",
 					name: "Jackie Chan",
 					portraitURL: "./images/JackieChan.jpg",
+          screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -25,6 +27,7 @@ class FamilyContainer extends React.Component {
 					email: "",
 					name: "Charlize Theron",
 					portraitURL:  "./images/CharlizeTheron.jpg",
+          screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -32,6 +35,7 @@ class FamilyContainer extends React.Component {
 					email: "",
 					name: "Halley Berry",
 					portraitURL: "./images/HalleyBerry.jpg",
+          screenLocation: 5,          
 					phone: "",
 				},				
 				{
@@ -39,12 +43,17 @@ class FamilyContainer extends React.Component {
 					email: "",
 					name: "Liam Neeson",
 					portraitURL: "images/LiamNeesonjpg.jpg",
+          screenLocation: 5,          
 					phone: "",
 				},
         
 			],
 		}
 	}
+  
+  assignRandomLocation(){
+    
+  }
 	
 	renderCameos() {
 		
