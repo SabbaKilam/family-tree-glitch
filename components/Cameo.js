@@ -4,7 +4,7 @@ class Cameo extends React.Component{
 		super( props );
 		this.state = {
       timerId: 0,
-      resizeTime: 0.5,
+      resizeTime: 1.75,
       resizeTimerId: 0,
 		  normalSize: "7rem",
 		  isSelected: false,
