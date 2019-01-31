@@ -51,7 +51,7 @@ class FamilyContainer extends React.Component {
 		const cameos = [];
 		let contact = null;
 		
-		for( let i=0; i<4; i++ ) {
+		for( let i=0; i<5; i++ ) {
 			
 			contact = this.state.familyInfo[i];
 			cameos.push(<Cameo contact={contact} key={i} />);
