@@ -30,13 +30,22 @@ class Cameo extends React.Component{
     this.setState({
       timerId: (
       		setInterval(()=>{
-            if(this.state.isSelected){
+            if ( this.state.isSelected ){
                 const viewportUnit = window.innerWidth >= window.innerHeight ?
                             "vw"
                           : "vh"  
                 source.style.height = `20${viewportUnit}`
                 source.style.width = `20${viewportUnit}`             
-            }    
+            }
+            else {
+              source.style.height = this.state.normalSize
+              source.style.width = this.state.normalSize
+              /*
+              this.setState({
+                isSelected: false
+              })
+              */
+            }
           }, 100) 
       )
     })
