@@ -27,12 +27,14 @@ body {
 .cameo {
 	border-radius: 50%;
 	/* round cameos*/
-	height: 8rem;
+  height: 8rem;
 	width: 8rem;
 	margin: 0.5rem;
 	box-shadow: 0.25rem 0.25rem 1rem black;
-	/*background: url("./images/frank.jpg") no-repeat center;*/
+	/*
+  background: url("./images/frank.jpg") no-repeat center;
 	background-size: contain;
+  */
 	background-color: lightblue;
 	font-size: 1.5rem;
 	text-align: center;
