@@ -84,10 +84,10 @@ class FamilyContainer extends React.Component {
 				},
 				{
 					description: "",
-					email: "Halley@HB.me",
-					name: "Halley Berry",
+					email: "inuit@IM.me",
+					name: "Inuit Man",
 					nickName: null,					
-					portraitURL: "./images/HalleyBerry.jpg",
+					portraitURL: "./images/inuitman.jpg",
         			screenLocation: 5,          
 					phone: "",
 				},				
