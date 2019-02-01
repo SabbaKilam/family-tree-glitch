@@ -50,8 +50,8 @@ body {
 	transform: translate(-50%);
 	width: 100vw;
 	max-width: 85vw;
-	padding: 1rem;
-	border-radius: 1rem;
+	padding: 1.5rem;
+	border-radius: 2rem;
 	box-shadow: 0.125rem 0.125rem 5rem gray;
 	display: grid;
 	place-content: center;
@@ -60,7 +60,7 @@ body {
 	text-shadow: 0 1px 0 #eee;
 	transition: all 0.25s ease;
 	min-height: 2rem;
-	background: url(images/FamilyTree.png) no-repeat left;
+	background: url(images/FamilyTree.png) no-repeat 2.5%;
 	background-size: 4.5rem 4.5rem;
 	transition: all 0.38s ease;
 	
@@ -116,6 +116,7 @@ body {
 	box-shadow: 0 0 10rem lightgray;
 	font-size: 1.75rem;
 	font-weight: bold;
+  //background-image: linear-gradient(-90deg, teal, lightblue, transparent);
 }
 #familyContainer{
 	position: absolute;
