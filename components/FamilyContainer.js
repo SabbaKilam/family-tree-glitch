@@ -57,10 +57,10 @@ class FamilyContainer extends React.Component {
 				//////////////////////////////////////////////////////////
 				{
 					description: "",
-					email: "Frank@FS.me",
-					name: "Frank Sinatra",
-					nickName: ' " Chairman of the Board " ',
-					portraitURL: "./images/frank.jpg",
+					email: "Denzel@DW.me",
+					name: "Denzel Washington",
+					nickName: ' " Man on Fire " ',
+					portraitURL: "./images/Denzel.jpg",
         			screenLocation: 5,          
 					phone: "",
 				},
