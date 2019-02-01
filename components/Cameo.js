@@ -1,4 +1,6 @@
 /*global React*/
+/*global L*/
+
 class Cameo extends React.Component{
 	constructor( props ) {		
 		super( props );
@@ -135,3 +137,4 @@ class Cameo extends React.Component{
 		)
 	}
 }
+

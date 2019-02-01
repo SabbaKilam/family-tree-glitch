@@ -10,7 +10,6 @@ html {
 	background-image: linear-gradient(-15deg, teal, lightblue, #eee,lightblue, teal);
 	overflow: hidden;
 	user-select: none;
-
   font-size: calc(0.5vh + 0.5vw + 4px);
 }
 
@@ -20,10 +19,6 @@ body {
 	padding: 1rem;
 	height: 100vh;
 	width: 100vw;
-	/*
-	display: grid;
-	place-content: center;
-	*/
 	overflow: hidden;
 }
 
@@ -51,7 +46,7 @@ body {
 	width: 100vw;
 	max-width: 85vw;
 	padding: 1.5rem;
-	border-radius: 2rem;
+	border-radius: 3rem;
 	box-shadow: 0.125rem 0.125rem 5rem gray;
 	display: grid;
 	place-content: center;
@@ -86,20 +81,6 @@ body {
 	font-size: 2rem;
 
 }
-
-#infoHolderCameo{
-	position: absolute;
-	left: 0;
-	top: 50%;
-	transform: translateY(-50%);
-	height: 37.5vw;
-	width: 37.5Vw;
-	border-radius: 50%;
-	background: url(images/kinkeepers.png) no-repeat left;
-	background-size: contain;
-	transition: all 2s ease;	
-}
-
 #infoHolderInfo{
 	position: absolute;
 	right: 0;
@@ -117,6 +98,26 @@ body {
 	font-weight: bold;
 }
 
+#infoGlass{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+#infoHolderCameo{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 37.5vw;
+	width: 37.5Vw;
+	border-radius: 50%;
+	background: url(images/kinkeepers.png) no-repeat left;
+	background-size: contain;
+	transition: all 2s ease;	
+}
+
+
 #familyContainer{
 	position: absolute;
 	width: 100%;
@@ -132,8 +133,16 @@ body {
   bottom: 0;
   left: 0;
   right: 0;  
-  visibility: visible;
-  background-color: rgba(200,200,200, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(200,200,200, 0.9);
+  transition: all 0.5s ease;
+  font-size: 2.5rem; 
+  font-weight: bold;
+  text-shadow: 0 1px 0 white;
+  padding-top: 1rem;
+  display: grid;
+  place-content: center;
 }
 
 #exitVeil{
@@ -141,5 +150,10 @@ body {
   right: 2%;
   top: 2%;
   box-shadow: 1px 1px 3px gray;  
-  border-radius: 50%;  
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+	background: url(images/ExitX.png) no-repeat center;
+  background-size: contain;
+  cursor: pointer;
 }

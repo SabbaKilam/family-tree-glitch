@@ -1,6 +1,11 @@
 /*global React*/
 /*global L*/
+
+const v = {};
 L.noPinchZoom();
+
+
+/////////////////////////////////////////////////////////
 class FamilyContainer extends React.Component {
 	
 	constructor( props ) {
@@ -136,3 +141,15 @@ class FamilyContainer extends React.Component {
 		)
 	}
 }
+
+L.attachAllElementsById(v);
+
+v.exitVeil.onclick = function(eventObject){
+  v.veil.css("visibility: hidden; opacity: 0")
+}
+
+v.infoGlass.onclick = function(eventObject){
+  v.veil.css("visibility: visible; opacity: 1")
+}
+
+
