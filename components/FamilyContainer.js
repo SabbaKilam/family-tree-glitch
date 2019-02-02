@@ -143,44 +143,61 @@ window.document.id = `document`
 
 c.initialize = (eventObject)=>{
     const eventTypes = [
-    "mousedown",
-    "touchstart",
-    "mouseup",
-    "touchend",  
-    "resize",
-    "load",
-    "DOMContentLoaded",
-    "orientationchange",
-    "change",
-    "input",
-    "mouseover",
-    "mouseout",
-    "mousemove",
-    "touchmove",
-    "online",
-    "offline",
-    "keyup",
-    "keydown",
-    "keypress",//maybe the preferred key event    
+      "mousedown",
+      "touchstart",
+      "mouseup",
+      "touchend",  
+      "resize",
+      "load",
+      "DOMContentLoaded",
+      "orientationchange",
+      "change",
+      "input",
+      "mouseover",
+      "mouseout",
+      "mousemove",
+      "touchmove",
+      "online",
+      "offline",
+      "keyup",
+      "keydown",
+      "keypress",//maybe the preferred key event    
     ]  
     for(let eventType of eventTypes){
       window.addEventListener(eventType, c.update, true)
     }
 }
-
+//////////////////////////////////////////////
 c.update = (eventObject) => {
   //update the model
   c.updateModel(eventObject)
+  
+  //update the view
   c.updateView({
     
   
   })
 }
+///////////////////////////////////////////////////////
+c.setHideVeil = (m)=>{}
+c.showHideVeil = (v)=>{
+  v.veil.css("visibility: hidden; opacity: 0")
+}
+//-----------------------------------------------//
+c.setShowVeil = (m)=>{}
+c.showShowVeil = (v)=>{
+  v.veil.css("visibility: visible; opacity: 1")
+}
 
+
+
+///////////////////////////////////////////////////////
+c.ini
 c.updateModel = (eventObject) => {}
 c.updateView = (handlerQualifiers) => {
   L.runQualifiedHandlers(handlerQualifiers, m, v, c)
 }
+
 //hide the veil
 v.exitVeil.onclick = function(eventObject){
   v.veil.css("visibility: hidden; opacity: 0")
