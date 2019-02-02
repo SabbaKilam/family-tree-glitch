@@ -29,7 +29,7 @@ class FamilyContainer extends React.Component {
 					name: "Jackie Chan",
 					nickName: '" Bruce Lee Jr. "',					
 					portraitURL: "./images/JackieChan.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -38,7 +38,7 @@ class FamilyContainer extends React.Component {
 					name: "Charlize Theron",
 					nickName: null,					
 					portraitURL:  "./images/CharlizeTheron.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -56,7 +56,7 @@ class FamilyContainer extends React.Component {
 					name: "Liam Neeson",
 					nickName: ' " The Kraken Master " ',					
 					portraitURL: "./images/LiamNeesonjpg.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				//////////////////////////////////////////////////////////
@@ -66,7 +66,7 @@ class FamilyContainer extends React.Component {
 					name: "Denzel Washington",
 					nickName: ' " Man on Fire " ',
 					portraitURL: "./images/Denzel.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -75,7 +75,7 @@ class FamilyContainer extends React.Component {
 					name: "Alexandria Ocasio-Cortez",
 					nickName: '" Fresh New Democrat "',					
 					portraitURL: "./images/aoc.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -84,7 +84,7 @@ class FamilyContainer extends React.Component {
 					name: "Lucy Liu",
 					nickName: null,					
 					portraitURL:  "./images/lucyliu.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
@@ -93,7 +93,7 @@ class FamilyContainer extends React.Component {
 					name: "Inuit Man",
 					nickName: null,					
 					portraitURL: "./images/inuitman.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},				
 				{
@@ -102,7 +102,7 @@ class FamilyContainer extends React.Component {
 					name: "Oyinade Onyikansola Omotosho",
 					nickName: ' " Nigerian Super Model " ',					
 					portraitURL: "./images/ooo.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},				
 				//////////////////////////////////////////////////////////
@@ -133,6 +133,10 @@ class FamilyContainer extends React.Component {
 	}
 }
 
+/*============================================================================*/
+/*=========================| non-react vanilla JS code |========================*/
+/*===========================================================================*/
+
 L.attachAllElementsById(v);
 
 //hide the veil
@@ -144,5 +148,6 @@ v.exitVeil.onclick = function(eventObject){
 v.infoGlass.onclick = function(eventObject){
   v.veil.css("visibility: visible; opacity: 1")
 }
+
 
 
