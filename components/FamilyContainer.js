@@ -106,20 +106,12 @@ class FamilyContainer extends React.Component {
 					phone: "",
 				},				
 				//////////////////////////////////////////////////////////
-						
-				
-        
 			],
 		}
 
 	}
   
-  assignRandomLocation(){
-    
-  }
-
-	
-	renderCameos() {
+  renderCameos() {
 		//		let name = this.props.info.nickName ? this.props.info.nickName : this.props.info.name ;
 		const cameos = [];
 		let info = null;
