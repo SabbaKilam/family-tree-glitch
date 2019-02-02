@@ -31,12 +31,8 @@ class Cameo extends React.Component{
     
 	let image = this.props.info.portraitURL.slice(2);
 	let cameo = this.state.infoHolderCameo;
-	let infoHolderInfo = this.state.infoHolderInfo;    
-  
-  
-  //L.attachAllElementsById(v)
-  v.partialCameo.css(`background-image: url(${image});`)    
-
+  v.partialCameo.css(`background-image: url(${image});`)        
+	let infoHolderInfo = this.state.infoHolderInfo;   
     
 	this.state.nameHolder.innerText = this.props.name;
 	cameo.style.background = `url(${image}) no-repeat center`;
@@ -45,7 +41,7 @@ class Cameo extends React.Component{
 	
     clearInterval(this.state.timerId);
     const source = eventObject.target;
-      const viewportUnit = window.innerWidth >= window.innerHeight ?
+    const viewportUnit = window.innerWidth >= window.innerHeight ?
                             "vh"
                           : "vw" 
       ;
@@ -90,9 +86,7 @@ class Cameo extends React.Component{
     source.style.width = this.state.normalSize;
     this.setState({
       isSelected: false
-    }); 
-                                
-                                  
+    });                         
   }
   ///////////////////////////////////////////////////////////////////////
   clearAndRestore(eventObject){
@@ -109,8 +103,7 @@ class Cameo extends React.Component{
       resizeTimerId: setTimeout( ()=>{
         this.restoreCameoSize(this.state.eventObject)
       }, 1000 * this.state.resizeTime )
-    });
-    
+    });    
   }
 //==========================| RENDER |=========================//
 	render() {
@@ -140,8 +133,7 @@ class Cameo extends React.Component{
 				id={this.props.id}				
 				onClick={this.enlargeCameo}
 				onMouseLeave={this.restoreCameoSize} 
-			/>   
-			
+			/>			
 		)
 	}
 }

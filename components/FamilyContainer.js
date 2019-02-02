@@ -146,10 +146,12 @@ class FamilyContainer extends React.Component {
 
 L.attachAllElementsById(v);
 
+//hide the veil
 v.exitVeil.onclick = function(eventObject){
   v.veil.css("visibility: hidden; opacity: 0")
 }
 
+//make veil visible
 v.infoGlass.onclick = function(eventObject){
   v.veil.css("visibility: visible; opacity: 1")
 }
