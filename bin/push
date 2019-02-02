@@ -6,8 +6,9 @@
 #  Modified:	 (Date)
 #  Original:	 push (name may have changed)
 #  Purpose: 	 A single command to commit and push
-#          	  local master git repo to remote origin (github)
-#  Note: 	    Requires a memo as arguments
+#          	 local master git repo to remote origin (github)
+#  Note: 	Requires a memo as arguments.
+#		The git commands may require the sudo command on some systems .
 #
 ################################
 if [ "${1}" = "" ];
