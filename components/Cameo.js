@@ -133,6 +133,8 @@ class Cameo extends React.Component{
 				id={this.props.id}				
 				onClick={this.enlargeCameo}
 				onMouseLeave={this.restoreCameoSize} 
+				onMouseEnter={this.enlargeCameo} 
+        
 			/>			
 		)
 	}

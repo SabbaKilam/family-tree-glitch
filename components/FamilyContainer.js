@@ -1,12 +1,10 @@
 /*global React*/
 /*global L*/
+/*global m*/
 /*global v*/
+/*global c*/
 
-
-//const v = {};
 L.noPinchZoom();
-
-
 /////////////////////////////////////////////////////////
 class FamilyContainer extends React.Component {
 	
