@@ -138,6 +138,39 @@ class FamilyContainer extends React.Component {
 /*=============================================================================*/
 
 L.attachAllElementsById(v);
+window.id = `window`
+window.document.id = `document`
+
+c.initialize = (eventObject)=>{
+    const eventTypes = [
+    "mousedown",
+    "touchstart",
+    "mouseup",
+    "touchend",  
+    "resize",
+    "load",
+    "DOMContentLoaded",
+    "orientationchange",
+    "change",
+    "input",
+    "mouseover",
+    "mouseout",
+    "mousemove",
+    "touchmove",
+    "online",
+    "offline",
+    "keyup",
+    "keydown",
+    "keypress",//maybe the preferred key event    
+    ]  
+    for(let eventType of eventTypes){
+      window.addEventListener(eventType, c.updateModel, true)
+    }
+}
+
+c.updateModel = (eventObject) => {
+  alert(eventObject)
+}
 
 //hide the veil
 v.exitVeil.onclick = function(eventObject){
@@ -148,6 +181,11 @@ v.exitVeil.onclick = function(eventObject){
 v.infoGlass.onclick = function(eventObject){
   v.veil.css("visibility: visible; opacity: 1")
 }
+/*
 
+
+
+
+*/
 
 
