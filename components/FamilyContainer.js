@@ -164,14 +164,23 @@ c.initialize = (eventObject)=>{
     "keypress",//maybe the preferred key event    
     ]  
     for(let eventType of eventTypes){
-      window.addEventListener(eventType, c.updateModel, true)
+      window.addEventListener(eventType, c.update, true)
     }
 }
 
-c.updateModel = (eventObject) => {
-  alert(eventObject)
+c.update = (eventObject) => {
+  //update the model
+  c.updateModel(eventObject)
+  c.updateView({
+    
+  
+  })
 }
 
+c.updateModel = (eventObject) => {}
+c.updateView = (handlerQualifiers) => {
+  L.runQualifiedHandlers(handlerQualifiers, m, v, c)
+}
 //hide the veil
 v.exitVeil.onclick = function(eventObject){
   v.veil.css("visibility: hidden; opacity: 0")
@@ -181,11 +190,7 @@ v.exitVeil.onclick = function(eventObject){
 v.infoGlass.onclick = function(eventObject){
   v.veil.css("visibility: visible; opacity: 1")
 }
-/*
 
-
-
-
-*/
+window.addEventListener(`load`, c.initialize, true)
 
 
