@@ -1,7 +1,9 @@
 /*global React*/
 /*global L*/
+/*global v*/
 
-const v = {};
+
+//const v = {};
 L.noPinchZoom();
 
 

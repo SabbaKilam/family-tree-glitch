@@ -1,5 +1,7 @@
 /*global React*/
 /*global L*/
+/*global v*/
+
 
 class Cameo extends React.Component{
 	constructor( props ) {		
@@ -15,9 +17,7 @@ class Cameo extends React.Component{
 		  infoHolder: document.querySelector('#infoHolder'),
 		  infoHolderCameo: document.querySelector("#infoHolderCameo"),
 		  infoHolderInfo: document.querySelector("#infoHolderInfo"),
-      eventObject: {type: "none", target: {}}
-		  
-		  //id="infoHolderCameo"
+      eventObject: {type: "none", target: {}},		  
 		};
 		
 		this.enlargeCameo = this.enlargeCameo.bind(this);
@@ -31,13 +31,11 @@ class Cameo extends React.Component{
     
 	let image = this.props.info.portraitURL.slice(2);
 	let cameo = this.state.infoHolderCameo;
-	let infoHolderInfo = this.state.infoHolderInfo;
-   
-    
-  let partialCameo = document.querySelector('.partialCameo');
-  let ns = {}
-  L.attachAllElementsById(ns)
-  ns.partialCameo.styles(`background-image: url(${image});`)    
+	let infoHolderInfo = this.state.infoHolderInfo;    
+  
+  
+  //L.attachAllElementsById(v)
+  v.partialCameo.css(`background-image: url(${image});`)    
 
     
 	this.state.nameHolder.innerText = this.props.name;
