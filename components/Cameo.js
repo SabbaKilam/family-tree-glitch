@@ -26,12 +26,20 @@ class Cameo extends React.Component{
 	////////////////////////////////////////////////////////////////////
   enlargeCameo(eventObject){
   eventObject.persist();  
-  this.clearAndRestore(eventObject)  
+  this.clearAndRestore(eventObject)
+    
     
 	let image = this.props.info.portraitURL.slice(2);
 	let cameo = this.state.infoHolderCameo;
 	let infoHolderInfo = this.state.infoHolderInfo;
+   
+    
+  let partialCameo = document.querySelector('.partialCameo');
+  let ns = {}
+  L.attachAllElementsById(ns)
+  ns.partialCameo.styles(`background-image: url(${image});`)    
 
+    
 	this.state.nameHolder.innerText = this.props.name;
 	cameo.style.background = `url(${image}) no-repeat center`;
 	cameo.style.backgroundSize = "cover";	
