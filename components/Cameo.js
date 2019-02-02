@@ -84,7 +84,9 @@ class Cameo extends React.Component{
     source.style.width = this.state.normalSize;
     this.setState({
       isSelected: false
-    });    
+    }); 
+                                
+                                  
   }
   ///////////////////////////////////////////////////////////////////////
   clearAndRestore(eventObject){

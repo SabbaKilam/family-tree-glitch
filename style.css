@@ -157,3 +157,29 @@ body {
   background-size: contain;
   cursor: pointer;
 }
+
+.partialCameo {
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px grey;
+    background-size: 75% 75%;
+    background-position: 100% 100%;
+}
+
+#partialCameo{
+    position: absolute;
+    top: -5rem;
+    left: -5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    box-shadow: 1px 1px 4px grey;
+    background: url(https://cdn.glitch.com/505d1879-0404-4906-b476-f9edce883086%2Flucyliu.jpg?1548982938142) no-repeat;
+    background-size: 75% 75%;
+    background-position: 100% 100%;
+}
+
