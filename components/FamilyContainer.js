@@ -22,7 +22,7 @@ class FamilyContainer extends React.Component {
 					name: "Frank Sinatra",
 					nickName: ' " Chairman of the Board " ',
 					portraitURL: "./images/frank.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 5,          
 					phone: "",
 				},
 				{
