@@ -108,7 +108,6 @@ class FamilyContainer extends React.Component {
 				//////////////////////////////////////////////////////////
 			],
 		}
-
 	}
   
   renderCameos() {

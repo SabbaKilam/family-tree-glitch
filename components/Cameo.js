@@ -1,7 +1,8 @@
 /*global React*/
 /*global L*/
+/*global m*/
 /*global v*/
-
+/*global c*/
 
 class Cameo extends React.Component{
 	constructor( props ) {		
