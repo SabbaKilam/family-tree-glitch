@@ -99,7 +99,7 @@ class Cameo extends React.Component{
     //kill prior timer
     clearTimeout(this.state.resizeTimerId);
     
-    //timer to restore size of target
+    //countdown timer to restore size of cameo
     this.setState({      
       resizeTimerId: setTimeout( ()=>{
         this.restoreCameoSize(this.state.eventObject)
