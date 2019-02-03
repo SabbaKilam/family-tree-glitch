@@ -82,10 +82,8 @@ c.updateModelAndView = (handlerQualifiers, eventObject) => {
 }
 ///////////////////////////////////////////////////////
 c.initializeModel = async function (eventObject){
-  eventObject.includedInClass = (className) => {
-    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
-  }  
-//////////////////////////////////////////////////
+
+  //////////////////////////////////////////////////
 ///////////| define all meta events  |////////////
 //////////////////////////////////////////////////
   /*
@@ -120,6 +118,11 @@ c.initializeModel = async function (eventObject){
 
   m.e = eventObject;				//a conveninet shorthand for eventObject
   m.source = eventObject.target;  //where the event took place
+  
+  m.source.includedInClass = (className) => {
+    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
+  }
+  
   m.type = eventObject.type;      //what the event was
   m.id = eventObject.target.id;   //the id of the element where the event occurred
   
@@ -224,9 +227,6 @@ c.initializeModel = async function (eventObject){
 }
 
 c.updateMetaEvents = (eventObject) => {
-  eventObject.includedInClass = (className) => {
-    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
-  }    
   let currentTime = Date.now();
   m.timeBetweenEvents = currentTime - m.eventTime ;//time between prior event and this one
   m.eventTime = currentTime ;
@@ -241,13 +241,13 @@ c.updateMetaEvents = (eventObject) => {
   m.historyTimeBetweenEvents.pop();
     
   m.eventObject = eventObject;    //the event object itself
-  /*
-  m.eventObject.includedInClass = (className) => {
-    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
-  }
-  */
   m.e = eventObject;				//a conveninet shorthand for eventObject	    
   m.source = eventObject.target;  //where the event occurred
+  
+  m.source.includedInClass = (className) => {
+    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
+  }
+  
   m.type = eventObject.type;      //what the event was
   m.id = eventObject.target.id;   //the id of the element where the event occurred
 
