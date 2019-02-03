@@ -1,4 +1,8 @@
 /*global React*/
+/*global L*/
+/*global m*/
+/*global v*/
+/*global c*/
 
 /////////////////////////////////////////////////////////
 class FamilyContainer extends React.Component {
@@ -102,7 +106,9 @@ class FamilyContainer extends React.Component {
 				},				
 				//////////////////////////////////////////////////////////
 			],
+     
 		}
+     m['familyInfo'] = this.state.familyInfo
 	}
   
   renderCameos() {
