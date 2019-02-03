@@ -13,6 +13,7 @@ window.id = `window`
 window.document.id = `document`
 
 c.initialize = (eventObject)=>{
+
   c.initializeModel(eventObject)
   const eventTypes = [
       "mousedown",
@@ -203,6 +204,8 @@ c.initializeModel = async function (eventObject){
 ////////////////////////////////////////////////////////////////////////
 ///////| define data (state variables) particular to this app: |////////
 //////////////////////////////////////////////////////////////
+  m.showVeil = false;
+  
   m.moveCount = 0;
   m.inDblPress = false;
   m.dblPressDelay = 50;
@@ -210,9 +213,6 @@ c.initializeModel = async function (eventObject){
   m.timeOfModelSave = 0;
   m.timeBetweenModelSaves = 0;
   m.modelSaveDelay = 10000; //10 seconds between saving model
-  
-  m.dayTheme = false;
-  m.busyChangingThemes = false;
 
 }
 
@@ -309,5 +309,7 @@ c.updateMetaEvents = (eventObject) => {
 /////////////////////////////////////////////////////////
 
 window.addEventListener(`load`, c.initialize, true)
+//window.addEventListener(`DOMContentLoaded`, c.initialize, true)
+
 
 
