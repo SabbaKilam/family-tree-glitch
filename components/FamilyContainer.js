@@ -1,8 +1,4 @@
 /*global React*/
-/*global L*/
-/*global m*/
-/*global v*/
-/*global c*/
 
 /////////////////////////////////////////////////////////
 class FamilyContainer extends React.Component {
@@ -110,11 +106,11 @@ class FamilyContainer extends React.Component {
 	}
   
   renderCameos() {
-		//		let name = this.props.info.nickName ? this.props.info.nickName : this.props.info.name ;
 		const cameos = [];
 		let info = null;
 		let name = null;
 		let maxCount = this.state.familyInfo.length
+    
 		for( let i = 0; i < maxCount; i++ ) {
 			info = this.state.familyInfo[i];
 			name = info.nickName ? info.nickName : info.name;
