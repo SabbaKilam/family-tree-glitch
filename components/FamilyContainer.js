@@ -19,7 +19,7 @@ class FamilyContainer extends React.Component {
 					name: "Frank Sinatra",
 					nickName: ' " Chairman of the Board " ',
 					portraitURL: "./images/frank.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 1,          
 					phone: "",
 				},
 				{
@@ -28,7 +28,7 @@ class FamilyContainer extends React.Component {
 					name: "Jackie Chan",
 					nickName: '" Bruce Lee Jr. "',					
 					portraitURL: "./images/JackieChan.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 2,          
 					phone: "",
 				},
 				{
@@ -37,7 +37,7 @@ class FamilyContainer extends React.Component {
 					name: "Charlize Theron",
 					nickName: null,					
 					portraitURL:  "./images/CharlizeTheron.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 3,          
 					phone: "",
 				},
 				{
@@ -46,7 +46,7 @@ class FamilyContainer extends React.Component {
 					name: "Halley Berry",
 					nickName: null,					
 					portraitURL: "./images/HalleyBerry.jpg",
-        			screenLocation: 5,          
+        	screenLocation: 4,          
 					phone: "",
 				},				
 				{
@@ -65,7 +65,7 @@ class FamilyContainer extends React.Component {
 					name: "Denzel Washington",
 					nickName: ' " Man on Fire " ',
 					portraitURL: "./images/Denzel.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 6,          
 					phone: "",
 				},
 				{
@@ -74,7 +74,7 @@ class FamilyContainer extends React.Component {
 					name: "Alexandria Ocasio-Cortez",
 					nickName: '" Fresh New Democrat "',					
 					portraitURL: "./images/aoc.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 7,          
 					phone: "",
 				},
 				{
@@ -83,7 +83,7 @@ class FamilyContainer extends React.Component {
 					name: "Lucy Liu",
 					nickName: null,					
 					portraitURL:  "./images/lucyliu.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 8,          
 					phone: "",
 				},
 				{
@@ -92,7 +92,7 @@ class FamilyContainer extends React.Component {
 					name: "Inuit Man",
 					nickName: null,					
 					portraitURL: "./images/inuitman.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 9,          
 					phone: "",
 				},				
 				{
@@ -101,14 +101,13 @@ class FamilyContainer extends React.Component {
 					name: "Oyinade Onyikansola Omotosho",
 					nickName: ' " Nigerian Super Model " ',					
 					portraitURL: "./images/ooo.jpg",
-        	screenLocation: 5,          
+        	screenLocation: 10,          
 					phone: "",
 				},				
 				//////////////////////////////////////////////////////////
-			],
-     
+			],     
 		}
-     m['familyInfo'] = this.state.familyInfo
+    m['familyInfo'] = this.state.familyInfo
 	}
   
   renderCameos() {
