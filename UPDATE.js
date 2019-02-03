@@ -11,6 +11,8 @@ c.update = (eventObject) => {
     setShowVeil: [m.source === v.infoGlass, m.pressed],
     setHideVeil: [m.source === v.exitVeil, m.pressed],
     setSpinCameo:[Array.from(document.querySelectorAll(`.cameo`)).includes(m.source), m.dblPressed],
+    
+    
   }, eventObject)
 }
 ///////////////////////////////////////////////////////
@@ -38,9 +40,8 @@ c.showSpinCameo = (v)=>{
     m.source.style.transform = `rotateX(360deg)`
   }
   else {
-     m.source.style.transform = `rotateX(0deg)`
+    m.source.style.transform = `rotateX(0deg)`   
   }
-
 }
 
 
