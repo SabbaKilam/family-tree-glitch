@@ -214,6 +214,11 @@ c.initializeModel = async function (eventObject){
   
   m.showVeil = false;
   m.spinCameo = false;
+  m.currentId = null;
+  
+  
+  
+  
   m.moveCount = 0;
   m.inDblPress = false;
   m.dblPressDelay = 50;

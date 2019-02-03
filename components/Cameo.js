@@ -26,6 +26,7 @@ class Cameo extends React.Component{
 	}
 	////////////////////////////////////////////////////////////////////
   enlargeCameo(eventObject){
+  m.currentId = eventObject.target.id  
   eventObject.persist();  
   this.clearAndRestore(eventObject)
     

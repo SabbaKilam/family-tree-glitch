@@ -107,7 +107,7 @@ class FamilyContainer extends React.Component {
 				//////////////////////////////////////////////////////////
 			],     
 		}
-    m['familyInfo'] = this.state.familyInfo
+    //m['familyInfo'] = this.state.familyInfo //bad: private info on global scope
 	}
   
   renderCameos() {
