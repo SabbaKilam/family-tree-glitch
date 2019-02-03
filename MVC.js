@@ -322,7 +322,3 @@ c.updateMetaEvents = (eventObject) => {
 /////////////////////////////////////////////////////////
 
 window.addEventListener(`load`, c.initialize, true)
-//window.addEventListener(`DOMContentLoaded`, c.initialize, true)
-
-
-
