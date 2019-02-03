@@ -41,8 +41,6 @@ c.initialize = (eventObject)=>{
     }
 }
 
-
-
 //////////////////////////////////////////////
 
 /* the following code was moved to UPDATE.js
