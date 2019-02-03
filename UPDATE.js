@@ -33,12 +33,12 @@ c.showShowVeil = (v)=>{
 c.setSpinCameo = (m)=>{
   m.spinCameo = !m.spinCameo
 }
-c.showSpinCameo = (m)=>{
+c.showSpinCameo = (v)=>{
   if(m.spinCameo){
-    m.source.style.transform = `rotatez(360deg)`
+    m.source.style.transform = `rotateX(360deg)`
   }
   else {
-     m.source.style.transform = `rotatez(0deg)`
+     m.source.style.transform = `rotateX(0deg)`
   }
 
 }
