@@ -114,7 +114,7 @@ class FamilyContainer extends React.Component {
 		for( let i = 0; i < maxCount; i++ ) {
 			info = this.state.familyInfo[i];
 			name = info.nickName ? info.nickName : info.name;
-			cameos.push( <Cameo info={info} key={i} id={"i" + i} name={name} duh="cameo"/> );
+			cameos.push( <Cameo info={info} key={i} id={"i" + i} name={name} className="cameo"/> );
 		}
 		
 		return cameos;

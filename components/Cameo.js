@@ -128,7 +128,7 @@ class Cameo extends React.Component{
 		
 		return(
 			<div 
-				className={this.props.duh} 	
+				className={this.props.className} 	
 				style={style}
 				name={name}
 				id={this.props.id}				
