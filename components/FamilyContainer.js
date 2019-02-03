@@ -170,14 +170,13 @@ c.initialize = (eventObject)=>{
 }
 //////////////////////////////////////////////
 c.update = (eventObject) => {
-  //update meat events
+  //update meta-events
   c.updateMetaEvents(eventObject)
   
   //update model and view
   c.updateModelAndView({
-    setShowVeil: [m.source === v.veil, m.pressed],
-    
-  
+    setShowVeil: [m.source === v.infoGlass, m.pressed],
+    setHideVeil: [m.source === v.exitVeil, m.pressed],
   })
 }
 ///////////////////////////////////////////////////////
@@ -201,6 +200,7 @@ c.initializeModel = async function (eventObject){
       and exit this method:
   */	
   ////////////////////////
+  /*
   const modelResponse = await window.fetch(`model.json`);
   const modelJson = await modelResponse.text(); // could do this in one step with .json() method
   const MODEL = JSON.parse(modelJson);
@@ -213,7 +213,8 @@ c.initializeModel = async function (eventObject){
     m.historyTimeBetweenEvents = [0,0,0,0,0];
     m.inDblPress = false;
     return; //because we will use this most recent state data (rather than start fresh)
-  }    
+  } 
+  */
   ////////////////////////
   m.firstTime = true;
   m.historyTimeBetweenEvents = [0,0,0,0,0];  
@@ -414,22 +415,11 @@ c.updateMetaEvents = (eventObject) => {
             : m.startCoordinates
   ; 
 };
-
 c.updateModelAndView = (handlerQualifiers) => {
   L.runQualifiedHandlers(handlerQualifiers, m, v, c)
 }
 /////////////////////////////////////////////////////////
-/*
-//hide the veil
-v.exitVeil.onclick = function(eventObject){
-  v.veil.css("visibility: hidden; opacity: 0")
-}
 
-//make veil visible
-v.infoGlass.onclick = function(eventObject){
-  v.veil.css("visibility: visible; opacity: 1")
-}
-*/
 window.addEventListener(`load`, c.initialize, true)
 
 
