@@ -82,6 +82,9 @@ c.updateModelAndView = (handlerQualifiers, eventObject) => {
 }
 ///////////////////////////////////////////////////////
 c.initializeModel = async function (eventObject){
+  eventObject.includedInClass = (className) => {
+    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
+  }  
 //////////////////////////////////////////////////
 ///////////| define all meta events  |////////////
 //////////////////////////////////////////////////
@@ -114,6 +117,7 @@ c.initializeModel = async function (eventObject){
   m.timeBetweenEvents = 0;
 
   m.eventObject = eventObject;    //the event object itself
+
   m.e = eventObject;				//a conveninet shorthand for eventObject
   m.source = eventObject.target;  //where the event took place
   m.type = eventObject.type;      //what the event was
@@ -201,9 +205,12 @@ c.initializeModel = async function (eventObject){
             : m.startCoordinates
   ;
   //et cetera ....
+  
+  
 ////////////////////////////////////////////////////////////////////////
 ///////| define data (state variables) particular to this app: |////////
-//////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+  
   m.showVeil = false;
   m.spinCameo = false;
   m.moveCount = 0;
@@ -217,6 +224,9 @@ c.initializeModel = async function (eventObject){
 }
 
 c.updateMetaEvents = (eventObject) => {
+  eventObject.includedInClass = (className) => {
+    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
+  }    
   let currentTime = Date.now();
   m.timeBetweenEvents = currentTime - m.eventTime ;//time between prior event and this one
   m.eventTime = currentTime ;
@@ -231,6 +241,11 @@ c.updateMetaEvents = (eventObject) => {
   m.historyTimeBetweenEvents.pop();
     
   m.eventObject = eventObject;    //the event object itself
+  /*
+  m.eventObject.includedInClass = (className) => {
+    return !! Array.from( document.querySelectorAll(`.${className}`) ).includes(eventObject.target)
+  }
+  */
   m.e = eventObject;				//a conveninet shorthand for eventObject	    
   m.source = eventObject.target;  //where the event occurred
   m.type = eventObject.type;      //what the event was
