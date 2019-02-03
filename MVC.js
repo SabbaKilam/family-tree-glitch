@@ -205,7 +205,7 @@ c.initializeModel = async function (eventObject){
 ///////| define data (state variables) particular to this app: |////////
 //////////////////////////////////////////////////////////////
   m.showVeil = false;
-  
+  m.spinCameo = false;
   m.moveCount = 0;
   m.inDblPress = false;
   m.dblPressDelay = 50;

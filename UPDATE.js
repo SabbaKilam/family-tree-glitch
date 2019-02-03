@@ -10,7 +10,7 @@ c.update = (eventObject) => {
     
     setShowVeil: [m.source === v.infoGlass, m.pressed],
     setHideVeil: [m.source === v.exitVeil, m.pressed],
-    setSpinCameo:[Array.from(document.querySelectorAll(`.cameo`)).includes(m.source), m.pressed],
+    setSpinCameo:[Array.from(document.querySelectorAll(`.cameo`)).includes(m.source), m.dblPressed],
   }, eventObject)
 }
 ///////////////////////////////////////////////////////
@@ -31,7 +31,17 @@ c.showShowVeil = (v)=>{
 }
 //-----------------------------------------------//
 c.setSpinCameo = (m)=>{
-  alert()
+  m.spinCameo = !m.spinCameo
 }
+c.showSpinCameo = (m)=>{
+  if(m.spinCameo){
+    m.source.style.transform = `rotatez(360deg)`
+  }
+  else {
+     m.source.style.transform = `rotatez(0deg)`
+  }
+
+}
+
 
 ////////////////////////////////////////////
